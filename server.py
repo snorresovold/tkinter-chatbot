@@ -7,6 +7,8 @@ class Server:
     def request(self, input):
         input.lower() # makes the responses none case sensitive
 
-        for k, v in self.relations.items():
+        for k, v in self.relations.items(): # we get an input from the dict, then return the opposite
             if k == input:
-                print(v)
+                return v
+            else:
+                return "This response was invalid"
