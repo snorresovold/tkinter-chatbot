@@ -1,4 +1,4 @@
-from tkinter import Tk, Label
+from tkinter import Tk, Label, Button
 from server import Server
 
 tk = Tk()
@@ -11,13 +11,20 @@ tk.geometry("1290x720")
 
 HEIGHT, WIDTH = 1290, 720
 
-# design
-intro = Label(text="Welcome to this chatbot!", fg="black", )
-intro.config(font=("comic sans", 16))
-intro.place(x = WIDTH/1.4, y = HEIGHT/53)
+#logikk
 
-content = Label(text="You can ask me all your python related questions!", fg="black", )
-content.config(font=("comic sans", 16))
-content.place(x = WIDTH/1.8, y = HEIGHT/23)
+
+# design
+
+# small top-text so that people have basic instructions
+lbl_intro = Label(text="Welcome to this chatbot!", fg="black", )
+lbl_intro.config(font=("comic sans", 16))
+lbl_intro.place(x = WIDTH/1.4, y = HEIGHT/53)
+
+lbl_content = Label(text="You can ask me all your python related questions!", fg="black", )
+lbl_content.config(font=("comic sans", 16))
+lbl_content.place(x = WIDTH/1.8, y = HEIGHT/23)
+
+btn_submit = Button(tk, bg="black")
 
 tk.mainloop()
