@@ -1,7 +1,6 @@
 from distutils.command.clean import clean
 from pdb import Restart
 from tkinter import*
-from turtle import clearscreen, st
 from server import *
 
 main = Tk()
@@ -33,7 +32,7 @@ txtChat.place(x=6, y=6, height=418, width=367)
 entInput = Entry(main, width=44, bg="#222230", foreground="#d1d2eb")
 entInput.place(x=6, y=430, height=64)
 
-WORDLIST = ["what", "hva", "ka", "hvilken", "kor", "where", "er", "is", "?", "a", "i", "in"]
+WORDLIST = ["what", "hva", "ka", "hvilken", "kor", "where", "er", "is", "?", "a", "i", "in"] # bare simpel ordliste
 
 #Send Text
 def send():
@@ -43,15 +42,12 @@ def send():
     for x in response_input.split(): # removes uneccesary words from the bot
         x.lower()
         if x in WORDLIST:
-            print("deleting", x)
             response_input = x.replace(x, "")
         else:
-            print("not deleting", x)
             lol = x
 
 
-    response_input.replace(" ", "")
-    print("response", lol)
+    response_input.replace(" ", "") # får vekk mellomrom
             
     txtChat.insert(END, "\n" + storedInput)
     answer = server.request(lol)

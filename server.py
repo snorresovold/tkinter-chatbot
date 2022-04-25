@@ -11,7 +11,6 @@ class Server:
         "function": "A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result",
     }
 
-    """
     def request(self, input):
         input.lower() # makes the responses none case sensitive
 
@@ -21,4 +20,13 @@ class Server:
             else:
                 print("not", k, v)
                 return "This response was invalid"
-    """
+"""
+    def request(self, input):
+        input.lower()
+
+        for x, v in self.relations:
+            if x in input:
+                return [x]
+            else:
+                return "You gave me a bad input :("
+"""
