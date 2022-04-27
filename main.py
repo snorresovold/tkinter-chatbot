@@ -1,5 +1,3 @@
-from distutils.command.clean import clean
-from pdb import Restart
 from tkinter import*
 from server import *
 
