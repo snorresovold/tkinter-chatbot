@@ -49,7 +49,7 @@ def send():
             
     txtChat.insert(END, "\n" + storedInput)
     answer = server.request(lol)
-    answer = "\nBot> " + answer
+    answer = "\nBot> " + str(answer)
     txtChat.insert (END, answer)
 
 #Send Button
